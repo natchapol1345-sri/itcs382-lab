@@ -1,6 +1,7 @@
 package parcelpoint;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class ParcelService {
@@ -16,7 +17,7 @@ public class ParcelService {
     }
 
     public List<Locker> getLockers() {
-        return lockers;
+        return Collections.unmodifiableList(lockers);
     }
 
     public Locker storeParcel(Parcel parcel) {
